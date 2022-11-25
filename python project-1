@@ -1,0 +1,27 @@
+import random
+a = 'y'
+score= 10
+user_score=0
+while a =="y":
+  num1 = int(input("enter the static number : "))
+ 
+  if num1>6 or num1<0:
+    print("enter number between 1 to 6.")
+  else:
+  #roll a dice
+    num2 = random.randint(1,6)
+    print("number coming after throwing dice : ", num2)
+   
+    if num1==num2:  
+      user_score+=score
+      print("your score = ", user_score)
+    else:
+      print("Sorry! you loose the game.")
+    
+    choice = input("Do you want to play this game again? if yes press 'y' else press 'n' :")
+    while choice!="y"and choice!="n": 
+      print("please, enter \"y\" or \"n\" ")
+      choice = input("Do you want to play this game again? if yes press 'y' else press 'n' :")
+    a = choice  
+
+print("game ended")    
